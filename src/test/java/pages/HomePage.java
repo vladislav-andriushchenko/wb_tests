@@ -46,7 +46,7 @@ public class HomePage {
     public HomePage selectItem(String itemId) {
         SelenideElement item = itemCatalog
                 .findBy(attribute("data-card-index", itemId));
-        item.$(".j-add-to-basket").scrollIntoView(true).click();
+        item.$(".j-add-to-basket").click();
         return this;
     }
 

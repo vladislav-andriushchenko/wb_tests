@@ -24,7 +24,7 @@ public class TestBase {
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
 
-        boolean isRemote = Boolean.parseBoolean(System.getProperty("remote", "true"));
+        boolean isRemote = Boolean.parseBoolean(System.getProperty("remote", "false"));
         if (isRemote) {
             Configuration.remote = System.getProperty("remoteUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 

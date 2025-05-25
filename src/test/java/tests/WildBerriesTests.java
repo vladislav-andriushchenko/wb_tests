@@ -86,7 +86,7 @@ public class WildBerriesTests extends TestBase {
         step("Проверить, что список товаров не пуст", () -> {
             assertThat(home.notFoundItems())
                     .as("Item list should be not blank")
-                    .isTrue();
+                    .isFalse();
         });
     }
 

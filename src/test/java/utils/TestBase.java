@@ -20,11 +20,14 @@ public class TestBase {
     public static void setup() {
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.baseUrl = System.getProperty("baseUrl", "https://www.wildberries.ru");
-        Configuration.pageLoadStrategy = "eager";
+//        Configuration.pageLoadStrategy = "eager";
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
+        Configuration.timeout = 10000;
+        Configuration.pollingInterval = 200;
 
-        boolean isRemote = Boolean.parseBoolean(System.getProperty("remote", "false"));
+
+        boolean isRemote = Boolean.parseBoolean(System.getProperty("remote", "true"));
         if (isRemote) {
             Configuration.remote = System.getProperty("remoteUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 

@@ -4,6 +4,8 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import pages.components.DialogWindow;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -61,7 +63,7 @@ public class HomePage {
     }
 
     public HomePage uploadImage(String filePath) {
-        imageSelectorPopup.shouldBe(visible);
+        imageSelectorPopup.shouldBe(visible, Duration.ofSeconds(5));
         imageSelector
                 .uploadFromClasspath("media/" + filePath);
         return this;

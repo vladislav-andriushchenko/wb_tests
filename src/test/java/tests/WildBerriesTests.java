@@ -93,7 +93,7 @@ public class WildBerriesTests extends TestBase {
     @DisplayName("Проверка поиска несуществующего товара")
     @Test
     void invalidSearchTest() {
-        String searchQuery = "testItem1488";
+        String searchQuery = "qwertyasdf";
 
         step("Найти товар по запросу", () -> {
             home
@@ -117,7 +117,7 @@ public class WildBerriesTests extends TestBase {
         step("Найти товар и добавить к корзину", () -> {
             home
                     .openPage()
-                    .enterValue(getRandomInstrument())
+                    .enterValue("iPhone")
                     .selectItem(item);
         });
 
@@ -155,7 +155,7 @@ public class WildBerriesTests extends TestBase {
         step("Найти товар и добавить к корзину", () -> {
             home
                     .openPage()
-                    .enterValue(getRandomInstrument())
+                    .enterValue("iPhone")
                     .selectItem(item);
         });
 
